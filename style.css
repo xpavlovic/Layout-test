@@ -9,6 +9,7 @@
 body {
   font-family: PTSerif;
 }
+/* for desktop */
 .grid {
   display: grid;
   grid-template-columns: 20% 30% 45%;
@@ -16,10 +17,10 @@ body {
   gap: 1em;
   margin-top: 5%;
   width: 95%;
-  height: 80%;
+  /*height: 60%; */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35%;
+  /*margin-bottom: 35%;*/
 }
 img {
   width: 100%;
@@ -63,12 +64,12 @@ img {
 }
 
 .footer {
-  margin-top: 30%;
   display: flex;
   width: 96%;
-  height: 680px;
+  height: 45em;
   margin-left: 2%;
   margin-right: 2%;
+  margin-top: 50%;
 }
 #h1-footer-text {
   font-size: 5em;
@@ -88,9 +89,110 @@ img {
 .h1 {
   position: absolute;
   bottom: 10px;
-  right: 30%;
-  left: 43%;
+  /*right: 30%; */
+  left: 45%;
   margin-top: 2%;
   font-size: xx-large;
   font-family: PT Sans;
+}
+#h1-zem {
+  color: dodgerblue;
+}
+#h1-eckis {
+  color: #fff;
+}
+
+/*for mobile phone */
+@media only screen and (max-width: 800px) {
+  .header_text {
+    top: 30%;
+    bottom: 40%;
+    font-size: medium;
+  }
+  .box1 {
+    grid-area: box1;
+  }
+  .text1 {
+    grid-area: article1;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .box2 {
+    grid-area: box2;
+  }
+  .text2 {
+    grid-area: article2;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .box3 {
+    grid-area: box3;
+  }
+  .text3 {
+    grid-area: article3;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .box4 {
+    grid-area: box4;
+  }
+  .text4 {
+    grid-area: article4;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 10% 10%;
+    grid-template-areas:
+      "box1 box1 box1 box1 box1 box1 article1 article1 article1 article1 article1 article1"
+      "img1 img1 img1 img1 img1 img1 box2 box2 box2 box2 box2 box2"
+      "article2 article2 article2 article2 article2 article2 img2 img2 img2 img2 img2 img2"
+      "box3 box3 box3 box3 box3 box3 article3 article3 article3 article3 article3 article3"
+      "img3 img3 img3 img3 img3 img3 box4 box4 box4 box4 box4 box4"
+      "article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4";
+  }
+
+  .footer {
+    display: block;
+    margin-top: 485%;
+  }
+  .footer-img {
+    margin-top: 30%;
+  }
+  .h1 {
+    left: 30%;
+  }
+  #h1-eckis {
+    color: dodgerblue;
+  }
+}
+
+/*for screens narrower than the mobile mockup */
+@media only screen and (max-width: 400px) {
+  .header_text {
+    top: 20%;
+    font-size: 1em;
+  }
+  .grid {
+    display: block;
+  }
+  .box {
+    position: static;
+  }
+  .childBox {
+    position: static;
+    transform: none;
+  }
+  .footer {
+    display: block;
+    margin-top: 20%;
+  }
+  .h1-footer-text {
+    font-size: 1em;
+  }
+  .h1 {
+    position: static;
+  }
 }
